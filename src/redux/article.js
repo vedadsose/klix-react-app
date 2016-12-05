@@ -1,25 +1,24 @@
 import request from 'superagent'
 
-export const LOAD = 'DYNO_LOAD'
-export const FAIL = 'DYNO_FAIL'
+export const LOAD = 'ARTICLE_LOAD'
+export const FAIL = 'ARTICLE_FAIL'
 
-export const loadedDyno = (articles) => {
-  return { articles, type: LOAD }
+export const loadedArticle = (article) => {
+  return { article, type: LOAD }
 }
 
-export const loadDyno = () => {
+export const loadArticle = (id) => {
   return dispatch => {
     request
-      .get('https://api.klix.ba/v1/dinamicna')
+      .get('https://api.klix.ba/v1/clanak/' + id)
       .then((res) => {
-        dispatch(loadedDyno(res.body))
+        dispatch(loadedArticle(res.body))
       })
   }
 }
 
 const defaultState = {
-  loading: true,
-  articles: []
+  loading: true
 }
 
 export default function reducer(state = defaultState, action) {
@@ -27,7 +26,7 @@ export default function reducer(state = defaultState, action) {
     case LOAD:
       return {
         ...state,
-        articles: action.articles,
+        ...action.article,
         loading: false
       }
     default:

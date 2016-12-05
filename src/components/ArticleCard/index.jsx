@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 import injectSheet from 'react-jss'
 import classNames from 'classnames'
 
@@ -16,10 +17,12 @@ const styles = {
     flexBasis: '25%'
   },
   articleContainer: {
+    display: 'block',
     position: 'relative',
     height: '100%',
     borderBottom: '1px solid #eee',
-    paddingBottom: 15
+    paddingBottom: 15,
+    textDecoration: 'none'
   },
   imgContainer: {
     position: 'relative'
@@ -42,13 +45,15 @@ const styles = {
   title: {
     fontFamily: 'Oswald, sans-serif',
     fontSize: 16,
-    margin: '10px 0'
+    margin: '10px 0',
+    color: '#111'
   },
   details: {
     position: 'absolute',
     bottom: 10,
     fontFamily: 'Lato, sans-serif',
-    fontSize: 12
+    fontSize: 12,
+    color: '#666'
   }
 }
 
@@ -67,7 +72,7 @@ class ArticleCard extends Component {
         [classes['w' + article.w]]: true,
         [classes['h' + article.h]]: true
       )}>
-        <div className={classes.articleContainer}>
+        <Link to={`/article/${article.sifra}`} className={classes.articleContainer}>
           <div className={classes.imgContainer}>
             <img src={image} className={classes.img} role="presentation" />
             <div className={classes.category}>
@@ -82,7 +87,7 @@ class ArticleCard extends Component {
           <div className={classes.details}>
             { article.ukupnoKomentara } komentara
           </div>
-        </div>
+        </Link>
       </div>
     );
   }

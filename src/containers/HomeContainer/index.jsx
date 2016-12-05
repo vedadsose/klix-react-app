@@ -13,7 +13,7 @@ export class HomeContainer extends Component {
     const { dyno } = this.props
     return (
       <div>
-        <Dyno articles={dyno.articles} />
+        <Dyno {...dyno} />
       </div>
     );
   }

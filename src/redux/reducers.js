@@ -1,2 +1,3 @@
 import dyno from './dyno'
-export default { dyno }
+import article from './article'
+export default { dyno, article }
