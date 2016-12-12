@@ -6,7 +6,8 @@ import Loader from '../Loader'
 const styles = {
   dyno: {
     display: 'flex',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    margin: '0 -10px'
   }
 }
 

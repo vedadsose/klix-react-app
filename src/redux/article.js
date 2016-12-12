@@ -2,9 +2,14 @@ import request from 'superagent'
 
 export const LOAD = 'ARTICLE_LOAD'
 export const FAIL = 'ARTICLE_FAIL'
+export const RESET = 'ARTICLE_RESET'
 
 export const loadedArticle = (article) => {
   return { article, type: LOAD }
+}
+
+export const resetArticleAction = () => {
+  return { type: RESET }
 }
 
 export const loadArticle = (id) => {
@@ -15,6 +20,10 @@ export const loadArticle = (id) => {
         dispatch(loadedArticle(res.body))
       })
   }
+}
+
+export const resetArticle = () => {
+  return dispatch => dispatch(resetArticleAction())
 }
 
 const defaultState = {
@@ -29,6 +38,8 @@ export default function reducer(state = defaultState, action) {
         ...action.article,
         loading: false
       }
+    case RESET:
+      return defaultState
     default:
       return state
   }

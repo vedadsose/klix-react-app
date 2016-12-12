@@ -5,8 +5,8 @@ import classNames from 'classnames'
 
 const styles = {
   article: {
-    margin: '10px 0',
-    padding: '10px',
+    margin: '0 0 10px 0',
+    padding: '0 10px',
     float: 'left',
     boxSizing: 'border-box'
   },
@@ -45,7 +45,8 @@ const styles = {
   title: {
     fontFamily: 'Oswald, sans-serif',
     fontSize: 16,
-    margin: '10px 0',
+    lineHeight: '24px',
+    margin: '10px 0 20px 0',
     color: '#111'
   },
   details: {

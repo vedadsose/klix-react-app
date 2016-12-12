@@ -4521,6 +4521,10 @@ react-dom@^15.4.1:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
 
+react-fontawesome@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/react-fontawesome/-/react-fontawesome-1.5.0.tgz#879d1b2aa5c48bba551e9237f84993217b5645c4"
+
 react-jss@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/react-jss/-/react-jss-4.2.0.tgz#5a300a98c095d946940682c09b7f223e01828541"
@@ -4602,6 +4606,10 @@ react-scripts@0.7.0:
     whatwg-fetch "1.0.0"
   optionalDependencies:
     fsevents "1.0.14"
+
+react-visibility-sensor@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/react-visibility-sensor/-/react-visibility-sensor-3.5.0.tgz#2cc70eb618bde8d7cb190b4a18575e6df3a5ac51"
 
 react@^15.4.1:
   version "15.4.1"
@@ -5337,6 +5345,10 @@ uglify-to-browserify@~1.0.0:
 uid-number@~0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/uid-number/-/uid-number-0.0.6.tgz#0ea10e8035e8eb5b8e4449f06da1c730663baa81"
+
+underscore@^1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.8.3.tgz#4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022"
 
 uniq@^1.0.1:
   version "1.0.1"
