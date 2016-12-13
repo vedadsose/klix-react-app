@@ -7,7 +7,7 @@ const styles = {
   }
 }
 
-class Comment extends Component {
+export class Comment extends Component {
   static propTypes = {
     username: React.PropTypes.string,
     komentar: React.PropTypes.string

@@ -23,7 +23,7 @@ const styles = {
   }
 }
 
-class ArticlePhoto extends Component {
+export class ArticlePhoto extends Component {
   static propTypes = {
     photo: React.PropTypes.object
   }
@@ -34,10 +34,14 @@ class ArticlePhoto extends Component {
 
     return (
       <div className={classes.imgContainer}>
-        <img src={image} className={classes.img} role="presentation" />
-        <div className={classes.description}>
-          { photo.opisSlike }
-        </div>
+        { photo &&
+          <div>
+            <img src={image} className={classes.img} role="presentation" />
+            <div className={classes.description}>
+              { photo.opisSlike }
+            </div>
+          </div>
+        }
       </div>
     );
   }

@@ -58,7 +58,7 @@ const styles = {
   }
 }
 
-class ArticleCard extends Component {
+export class ArticleCard extends Component {
   static propTypes = {
     article: React.PropTypes.object
   }

@@ -74,7 +74,7 @@ class Article extends Component {
 
             <div className={classes.content}>
               <ArticlePhoto photo={article.fotke} />
-              <div dangerouslySetInnerHTML={{__html: article.tekst.replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '<br />')}}></div>
+              <div dangerouslySetInnerHTML={{__html: article.tekst && article.tekst.replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '<br />')}}></div>
             </div>
           </div>
         }

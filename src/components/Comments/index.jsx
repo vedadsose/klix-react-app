@@ -12,7 +12,7 @@ const styles = {
   }
 }
 
-class Comments extends Component {
+export class Comments extends Component {
   static propTypes = {
     comments: React.PropTypes.array,
     loading: React.PropTypes.bool,
